@@ -1,14 +1,9 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     return choices[Math.floor(Math.random() * choices.length)];
-}
-
-function getPlayerChoice() {
-    let choice = prompt('Enter rock, paper, or scissors:').toLowerCase();
-    while (choice !== 'rock' && choice !== 'paper' && choice !== 'scissors') {
-        choice = prompt('Invalid input. Please enter rock, paper, or scissors:').toLowerCase();
-    }
-    return choice;
 }
 
 function determineWinner(playerChoice, computerChoice) {
@@ -19,20 +14,27 @@ function determineWinner(playerChoice, computerChoice) {
     if ((playerChoice === 'rock' && computerChoice === 'scissors') ||
         (playerChoice === 'paper' && computerChoice === 'rock') ||
         (playerChoice === 'scissors' && computerChoice === 'paper')) {
+        playerScore++;
         return "You win!";
     }
     
+    computerScore++;
     return "Computer wins!";
 }
 
-function playGame() {
-    const playerChoice = getPlayerChoice();
-    const computerChoice = getComputerChoice();
-    
-    console.log(`Your choice: ${playerChoice}`);
-    console.log(`Computer's choice: ${computerChoice}`);
-    console.log(determineWinner(playerChoice, computerChoice));
+function updateDisplay(playerChoice, computerChoice, result) {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `
+        Your choice: ${playerChoice}<br>
+        Computer's choice: ${computerChoice}<br>
+        ${result}
+    `;
+    document.getElementById('score').textContent = 
+        `Score - You: ${playerScore} Computer: ${computerScore}`;
 }
 
-// Start the game
-playGame();
+function playGame(playerChoice) {
+    const computerChoice = getComputerChoice();
+    const result = determineWinner(playerChoice, computerChoice);
+    updateDisplay(playerChoice, computerChoice, result);
+}
