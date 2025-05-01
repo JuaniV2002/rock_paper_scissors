@@ -1,4 +1,4 @@
-## 3. Rock Paper Scissors Game
+## Rock Paper Scissors Game
 
 ### Overview
 An engaging and intuitive implementation of the classic Rock-Paper-Scissors game in your browser.
