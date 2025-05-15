@@ -18,4 +18,4 @@ An engaging and intuitive implementation of the classic Rock-Paper-Scissors game
 - JavaScript
 
 ### Screenshot
-![rock-paper-scissors](https://github.com/user-attachments/assets/5c09a77c-900f-4970-a535-dfb75be73b58)
+![Screenshot 2025-05-15 at 01 38 23](https://github.com/user-attachments/assets/d07ebeb8-f93f-4da6-860c-e506da50b64e)
