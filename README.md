@@ -17,7 +17,7 @@ An engaging and intuitive implementation of the classic Rock-Paper-Scissors game
 - Polished, responsive design with animated interactions
 
 ### Usage
-[Click here!](https://juaniv2002.github.io/rock-paper-scissors/)
+[Click here!](https://juaniv2002.github.io/rock_paper_scissors/)
 
 ### Technologies
 - HTML
