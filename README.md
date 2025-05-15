@@ -10,7 +10,7 @@ An engaging and intuitive implementation of the classic Rock-Paper-Scissors game
 - Stylish and responsive UI with animated elements.
 
 ### Usage
-[CLick here!](https://juaniv2002.github.io/rock-paper-scissors/)
+[Click here!](https://juaniv2002.github.io/rock-paper-scissors/)
 
 ### Technologies
 - HTML
