@@ -10,9 +10,7 @@ An engaging and intuitive implementation of the classic Rock-Paper-Scissors game
 - Stylish and responsive UI with animated elements.
 
 ### Usage
-1. Open `index.html` in your web browser.
-2. Choose Rock, Paper, or Scissors to play.
-3. View the game outcome and updated score instantly.
+[CLick here!](https://juaniv2002.github.io/rock-paper-scissors/)
 
 ### Technologies
 - HTML
