@@ -1,12 +1,22 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #ece9e6, #ffffff);
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.game-container {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
 
 h1 {
@@ -14,49 +24,59 @@ h1 {
   color: #37474f;
 }
 
-.choices {
+.scoreboard {
   display: flex;
-  justify-content: center;
-  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #263238;
+  gap: 10px;
 }
 
-button {
-  padding: 15px 30px;
-  margin: 0 10px;
-  font-size: 1rem;
+.choices button {
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 1.2rem;
   border: none;
-  border-radius: 8px;
-  color: #ffffff;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #64b5f6, #42a5f5);
+  color: white;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.1s ease-in-out;
+  transition: all 0.2s ease;
 }
 
-button:hover {
+.choices button:hover {
+  background: linear-gradient(145deg, #42a5f5, #1e88e5);
   transform: translateY(-3px);
 }
 
-button:nth-child(1) {
-  background: linear-gradient(145deg, #ff8a80, #ff5252);
-}
-
-button:nth-child(2) {
-  background: linear-gradient(145deg, #80d8ff, #40c4ff);
-}
-
-button:nth-child(3) {
-  background: linear-gradient(145deg, #ccff90, #b2ff59);
-}
-
-#result {
-  font-size: 1.2rem;
-  color: #546e7a;
+.results {
   margin-top: 20px;
 }
 
-#score {
-  font-size: 1.3rem;
+#result-message {
+  font-size: 1.2rem;
+  color: #546e7a;
+  margin-bottom: 10px;
   font-weight: bold;
-  color: #263238;
-  margin-top: 15px;
+}
+
+#history-log {
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  color: #455a64;
+  text-align: left;
+  margin-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+select {
+  font-size: 1rem;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
