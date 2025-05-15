@@ -3,18 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rock Paper Scissors</title>
+  <title>Rock Paper Scissors - Enhanced</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Rock Paper Scissors</h1>
-  <div class="choices">
-    <button onclick="playGame('rock')">Rock</button>
-    <button onclick="playGame('paper')">Paper</button>
-    <button onclick="playGame('scissors')">Scissors</button>
+  <div class="game-container">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="scoreboard">
+      <div>You: <span id="player-score">0</span></div>
+      <div>Computer: <span id="computer-score">0</span></div>
+      <div>Streak: <span id="win-streak">0</span></div>
+      <div>Difficulty:
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="choices">
+      <button data-choice="rock">🪨 Rock</button>
+      <button data-choice="paper">📄 Paper</button>
+      <button data-choice="scissors">✂️ Scissors</button>
+    </div>
+
+    <div class="results">
+      <div id="result-message">Make your move!</div>
+      <div id="history-log"></div>
+    </div>
   </div>
-  <div id="result"></div>
-  <div id="score">Score - You: 0 | Computer: 0</div>
 
   <script src="game.js"></script>
 </body>
