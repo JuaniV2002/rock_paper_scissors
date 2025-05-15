@@ -4,10 +4,17 @@
 An engaging and intuitive implementation of the classic Rock-Paper-Scissors game in your browser.
 
 ### Features
-- Interactive buttons for user selection.
-- Real-time score tracking.
-- Immediate visual feedback on game results.
-- Stylish and responsive UI with animated elements.
+- Player can choose between Rock, Paper, or Scissors (with emojis)
+- Difficulty levels:
+  - Easy: random computer choices
+  - Hard: 30% chance of counter-strategy by the computer
+- Descriptive result feedback (who won and why)
+- Live score tracking:
+  - Player score
+  - Computer score
+  - Win streak counter
+- Match history (last 10 rounds displayed)
+- Polished, responsive design with animated interactions
 
 ### Usage
 [Click here!](https://juaniv2002.github.io/rock-paper-scissors/)
