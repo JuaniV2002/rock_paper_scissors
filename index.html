@@ -5,32 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rock Paper Scissors - Enhanced</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <div class="theme-toggle">
+    <button id="theme-btn"><i class="fas fa-moon"></i></button>
+  </div>
+
   <div class="game-container">
-    <h1>Rock Paper Scissors</h1>
+    <div class="header">
+      <h1>🎮 Rock Paper Scissors</h1>
+      <div class="stats-summary">
+        <div class="stat-item">
+          <span class="stat-label">Total Games:</span>
+          <span id="total-games">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Win Rate:</span>
+          <span id="win-rate">0%</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Best Streak:</span>
+          <span id="best-streak">0</span>
+        </div>
+      </div>
+    </div>
 
     <div class="scoreboard">
-      <div>You: <span id="player-score">0</span></div>
-      <div>Computer: <span id="computer-score">0</span></div>
-      <div>Streak: <span id="win-streak">0</span></div>
-      <div>Difficulty:
+      <div class="score-card player-card">
+        <div class="score-header">👤 You</div>
+        <div class="score-value" id="player-score">0</div>
+      </div>
+      <div class="score-card streak-card">
+        <div class="score-header">🔥 Streak</div>
+        <div class="score-value" id="win-streak">0</div>
+      </div>
+      <div class="score-card computer-card">
+        <div class="score-header">🤖 Computer</div>
+        <div class="score-value" id="computer-score">0</div>
+      </div>
+    </div>
+
+    <div class="game-settings">
+      <div class="setting-group">
+        <label>Difficulty:</label>
         <select id="difficulty">
-          <option value="easy">Easy</option>
-          <option value="hard">Hard</option>
+          <option value="easy">😊 Easy</option>
+          <option value="hard">😈 Hard</option>
+          <option value="impossible">💀 Impossible</option>
         </select>
+      </div>
+      <div class="setting-group">
+        <label>Game Mode:</label>
+        <select id="game-mode">
+          <option value="classic">Classic</option>
+          <option value="best-of-5">Best of 5</option>
+          <option value="timed">Timed (30s)</option>
+        </select>
+      </div>
+      <div class="setting-group">
+        <button id="reset-game" class="reset-btn">🔄 Reset Game</button>
+      </div>
+    </div>
+
+    <div class="battle-arena">
+      <div class="player-choice-display">
+        <div class="choice-preview" id="player-preview">?</div>
+        <span>You</span>
+      </div>
+      <div class="vs-indicator">⚔️</div>
+      <div class="computer-choice-display">
+        <div class="choice-preview" id="computer-preview">?</div>
+        <span>Computer</span>
       </div>
     </div>
 
     <div class="choices">
-      <button data-choice="rock">🪨 Rock</button>
-      <button data-choice="paper">📄 Paper</button>
-      <button data-choice="scissors">✂️ Scissors</button>
+      <button data-choice="rock" class="choice-btn">
+        <span class="choice-emoji">🪨</span>
+        <span class="choice-name">Rock</span>
+      </button>
+      <button data-choice="paper" class="choice-btn">
+        <span class="choice-emoji">📄</span>
+        <span class="choice-name">Paper</span>
+      </button>
+      <button data-choice="scissors" class="choice-btn">
+        <span class="choice-emoji">✂️</span>
+        <span class="choice-name">Scissors</span>
+      </button>
+    </div>
+
+    <div class="game-status">
+      <div id="timer-display" class="timer hidden">⏱️ <span id="timer">30</span>s</div>
+      <div id="round-counter" class="round-counter hidden">Round <span id="current-round">1</span> of <span id="total-rounds">5</span></div>
     </div>
 
     <div class="results">
-      <div id="result-message">Make your move!</div>
-      <div id="history-log"></div>
+      <div id="result-message" class="result-message">Make your move!</div>
+      <div class="achievements" id="achievements"></div>
+    </div>
+
+    <div class="history-section">
+      <h3>📊 Match History</h3>
+      <div id="history-log" class="history-log"></div>
+      <button id="clear-history" class="clear-btn">Clear History</button>
+    </div>
+
+    <div class="sound-controls">
+      <button id="sound-toggle" class="sound-btn">🔊</button>
+    </div>
+  </div>
+
+  <div id="game-over-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modal-title">Game Over!</h2>
+      <div id="modal-stats"></div>
+      <button id="play-again" class="play-again-btn">Play Again</button>
     </div>
   </div>
 

@@ -5,16 +5,28 @@ An engaging and intuitive implementation of the classic Rock-Paper-Scissors game
 
 ### Features
 - Player can choose between Rock, Paper, or Scissors (with emojis)
-- Difficulty levels:
+- **Three difficulty levels:**
   - Easy: random computer choices
   - Hard: 30% chance of counter-strategy by the computer
-- Descriptive result feedback (who won and why)
-- Live score tracking:
-  - Player score
-  - Computer score
-  - Win streak counter
-- Match history (last 10 rounds displayed)
-- Polished, responsive design with animated interactions
+  - Impossible: 70% counter-strategy with pattern recognition AI
+- **Multiple game modes:**
+  - Classic: traditional unlimited rounds
+  - Best of 5: first to win 3 rounds wins the series
+  - Timed: 30-second challenge mode
+- **Enhanced visual battle arena** with live choice previews and animations
+- **Advanced statistics tracking:**
+  - Live score tracking (Player vs Computer)
+  - Win streak counter with best streak record
+  - Total games played counter
+  - Win rate percentage calculation
+- **Achievement system** with unlockable badges for milestones
+- **Comprehensive match history** (last 20 rounds stored with visual indicators)
+- **Dark/Light theme toggle** with system preference detection
+- **Sound effects** for game results with toggle control
+- **Keyboard support** (1/R for Rock, 2/P for Paper, 3/S for Scissors)
+- **Data persistence** - saves progress, stats, and preferences locally
+- **Responsive design** with smooth animations and modern glassmorphism UI
+- **Pattern analysis** for impossible mode that learns from player behavior
 
 ### Usage
 [Click here!](https://juaniv2002.github.io/rock_paper_scissors/)
@@ -23,6 +35,3 @@ An engaging and intuitive implementation of the classic Rock-Paper-Scissors game
 - HTML
 - CSS
 - JavaScript
-
-### Screenshot
-![Screenshot 2025-05-15 at 01 38 23](https://github.com/user-attachments/assets/d07ebeb8-f93f-4da6-860c-e506da50b64e)
